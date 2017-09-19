@@ -1,2 +1,2 @@
 # codewars
-codewars tasks
+codewars tasks solved in python
