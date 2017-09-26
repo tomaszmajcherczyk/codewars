@@ -1,0 +1,20 @@
+"""
+6 kyu Bit counting
+
+Write a function that takes an (unsigned) integer as input, and returns the number of
+bits that are equal to one in the binary representation of that number.
+
+Example: The binary representation of 1234 is 10011010010, so the function should return 5 in this case
+"""
+
+def countBits(n):   
+    if n == 0:
+        return 0
+    count = 0
+    while n != 1:
+        if n % 2 == 0:
+            n = int(n / 2)
+        else:
+            count += 1
+            n = int(n / 2)
+    return(count + 1)
