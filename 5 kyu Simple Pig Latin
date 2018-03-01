@@ -1,0 +1,34 @@
+"""
+Move the first letter of each word to the end of it, then add "ay" to the end of the word.
+Leave punctuation marks untouched.
+
+Examples
+pig_it('Pig latin is cool') # igPay atinlay siay oolcay
+pig_it('Hello world !')     # elloHay orldWay !
+"""
+import string
+
+
+def pig_it(text):
+    x = ''
+    text_list = text.split()
+    for i in text_list:
+        c = i
+        if c in string.punctuation:
+            x += i
+        else:
+            str_i = str(i)
+            b = str_i[1:] + str_i[0] + 'ay'
+
+            x += b + ' '
+    if x[-1] == ' ':
+        ans = x[:-1]
+    else:
+        ans = x
+    print(ans)
+
+
+aa = 'Panem et circenses'
+
+
+pig_it(aa)
